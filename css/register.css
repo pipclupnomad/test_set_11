@@ -1,0 +1,231 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+:root {
+    --left-right-container-form: auto;
+    --font-size: 1rem;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+    margin-right: 5rem;
+}
+
+label {
+    color: white;
+    font-weight: bolder;
+    font-size: var(--font-size);
+}
+
+form {
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    width: 25rem;
+    padding: 1rem;
+    /* text-align: center; */
+}
+
+.container-form {
+    width: fit-content;
+    margin-left: var(--left-right-container-form);
+    margin-right: var(--left-right-container-form);
+}
+
+div {
+    margin-top: 2rem;
+    width: 20rem;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+    width: 20rem;
+    height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea{
+    width: 20rem;
+    height: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.choose {
+    display: flex;
+    width: 20rem;
+}
+
+.choose>label {
+    margin-top: 1rem;
+    width: 10rem;
+}
+
+.color {
+    color: white;
+    margin-top: 1rem;
+}
+
+.submit-reset {
+    margin-top: 2rem;
+}
+
+input[type=submit] {
+    width: 7.5rem;
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: var(--font-size);
+    box-shadow: 0 5px 0 gray;
+    transition: 0.3s;
+}
+
+input[type=submit]:active {
+    width: 7.5rem;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: var(--font-size);
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+input[type=reset] {
+    width: 7.5rem;
+    color: white;
+    background-color: blue;
+    border: none;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: var(--font-size);
+    box-shadow: 0 5px 0 gray;
+    transition: 0.3s;
+}
+
+input[type=reset]:hover {
+    width: 7.5rem;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: var(--font-size);
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+/* light mode dark mode */
+.changeTheme {
+    margin: -1rem auto -1rem auto;
+    width: 4.5rem;
+    height: 2rem;
+    display: block;
+    background-color: #CBCBCB;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.changeTheme::before {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    content: '';
+    border-radius: 50%;
+    transition: 0.5s;
+    /* box-shadow: 0 5px 10px #b5b4b4; */
+}
+
+.changeTheme input {
+    display: none;
+}
+
+.changeTheme:has(input:checked) {
+    background-color: #4cb774;
+}
+
+.changeTheme:has(input:checked)::before {
+    left: 55%;
+}
+
+body:has(input[name="changeTheme"]:checked) {
+    /* background-image: linear-gradient(to right, #1a1f39, #1a1f37); */
+    background-color: white;
+}
+
+body:has(input[name="changeTheme"]:checked) input {
+    background-color: pink;
+}
+
+body:has(input[name="changeTheme"]:checked) textarea {
+    background-color: pink;
+}
+
+body:has(input[name="changeTheme"]:checked) select {
+    background-color: pink;
+}
+
+body:has(input[name="changeTheme"]:checked) option {
+    background-color: pink;
+}
+
+body:has(input[name="changeTheme"]:checked) .container-form {
+    /* background-color: #34304655; */
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: none;
+}
+
+body:has(input[name="changeTheme"]:checked) form {
+    box-shadow: none;
+    /* border: 1px solid white; */
+}
+
+body:has(input[name="changeTheme"]:checked) h1 {
+    color: black;
+}
+
+body:has(input[name="changeTheme"]:checked) li a {
+    color: black;
+}
+
+body:has(input[name="changeTheme"]:checked) label {
+    color: black;
+}
+
+body:has(input[name="changeTheme"]:checked) .hb {
+    color: black;
+}
+
+body:has(input[name="changeTheme"]:checked) .male-female {
+    color: black;
+}
+
+body:has(input[name="changeTheme"]:checked) .submit-reset>input {
+    color: black;
+    font-weight: 500;
+}
+
+body:has(input[name="changeTheme"]:checked) .choose .color {
+    color: black;
+    font-weight: 500;
+}
